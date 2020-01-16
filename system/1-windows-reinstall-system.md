@@ -16,23 +16,23 @@
 
 
 
-![img](..\assert\images\1.webp)
+![img](../assert/images/1.webp)
 
 2. 进入安装PE到U盘选项，这里有七中安装方法，可以根据自己的需要选择，一般我们选择方案一即可，如果制作之后无法启动，再选择其他方案尝试。格式化旁边是U盘的分区格式，共三种，建议选择exFAT，这种格式是最适合U盘的，但是要注意exFAT格式在XP系统下是无法识别的。如果是新手，全部选择默认，不做改动即可。
 
-   ![img](..\assert\images\2.webp)
+   ![img](../assert/images/2.webp)
 
 3. 设置完成点击立即安装进U盘，就开始制作了
 
 
 
-![img](I:\08-note-folder\my-share\assert\images\4.webp)
+![img](../assert/images/4.webp)
 
 4. 制作过程稍作等待，大概需要一两分钟的时间，当弹出安装完成的提示时，我们的微PE系统维护U盘就制作完成了。需要注意的是在安装38%或55%到时会卡一段较长时间，如果你电脑已经购买超5年会一直卡在某个进度，建议换个USB插口或电脑刻录PE系统。
 
 
 
-![img](I:\08-note-folder\my-share\assert\images\3.webp)
+![img](../assert/images/3.webp)
 
 5. 将下载好的系统复制到u盘中
 
@@ -42,7 +42,7 @@
 
 2. 进入u盘系统以后进入桌面软件:分区助手PE版
 
-   ![img](I:\08-note-folder\my-share\assert\images\5.png)
+   ![img](../assert/images/5.png)
 
 3. 删除非固态硬盘所在盘的小分区, 最后记得点击软件左上角的提交按钮完成操作
 
