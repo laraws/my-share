@@ -2,7 +2,7 @@
 
 # install zsh
 
-sudo apt update && apt install wget curl git zsh -y
+sudo apt update && sudo apt install wget curl git zsh -y
 
 # set zsh as default shell
 
@@ -22,12 +22,12 @@ sed -i -E "s/^plugins=.*/plugins=(git zsh-autosuggestions zsh-syntax-highlightin
 # fix zsh-autosuggestions slow issue
 tee -a ~/.zshrc << EOF
 pasteinit() {
-  OLD_SELF_INSERT=${${(s.:.)widgets[self-insert]}[2,3]}
+  OLD_SELF_INSERT=\${\${(s.:.)widgets[self-insert]}[2,3]}
   zle -N self-insert url-quote-magic
 }
 
 pastefinish() {
-  zle -N self-insert $OLD_SELF_INSERT
+  zle -N self-insert \$OLD_SELF_INSERT
 }
 zstyle :bracketed-paste-magic paste-init pasteinit
 zstyle :bracketed-paste-magic paste-finish pastefinish
