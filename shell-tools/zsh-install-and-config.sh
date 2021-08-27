@@ -17,13 +17,13 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
 git clone https://github.com/zsh-users/zsh-autosuggestions.git
 
 # load useful plugins
-sed -i -E "s/^plugins=.*/plugins=(git zsh-autosuggestions zsh-syntax-highlighting)/g"  ~/.zshrc.bak
+sed -i -E "s/^plugins=.*/plugins=(git zsh-autosuggestions zsh-syntax-highlighting)/g"  ~/.zshrc
 
 # fix zsh-autosuggestions slow issue
-cat << 'ADDCONTENT'
+tee -a ~/.zshrc << EOF
 pasteinit() {
   OLD_SELF_INSERT=${${(s.:.)widgets[self-insert]}[2,3]}
-  zle -N self-insert url-quote-magic # I wonder if you'd need `.url-quote-magic`?
+  zle -N self-insert url-quote-magic
 }
 
 pastefinish() {
@@ -31,4 +31,4 @@ pastefinish() {
 }
 zstyle :bracketed-paste-magic paste-init pasteinit
 zstyle :bracketed-paste-magic paste-finish pastefinish
-ADDCONTENT
+EOF
