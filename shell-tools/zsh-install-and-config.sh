@@ -12,6 +12,9 @@ sudo chsh -s /bin/zsh
 rm -rf $HOME/.oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
+# config show pwd
+echo "PROMPT=\${PROMPT/\%c/\%~}" >> ~/.zshrc
+
 # install useful plugins
 cd ~/.oh-my-zsh/custom/plugins
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
